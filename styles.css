@@ -178,22 +178,6 @@ About section
     font-size: 2vw;
 }
 
-/* .about-info {
-    border: 2px solid rgb(0, 255, 255);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-} */
-
-/* .about-info summary {
-    padding: 2px 6px;
-    background-color: #794f4f;
-    border: none;
-    box-shadow: 1px 1px 4px rgb(255, 255, 255);
-    cursor: pointer;
-} */
 
 
 @media screen and (min-width: 420px) {
@@ -369,30 +353,31 @@ Contact
 */
 
 
-.contact .row {
+.contact {
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
-    padding: 3rem;
+    gap: 1rem;
+    width: 80%;
+    margin: 3rem auto 1rem auto;
 }
 
-.contact .row .content .contact-info h3 {
-    font-size: max( 1rem, 2vw);
+.contact .content{
+    text-align: left;
+}
+.contact .content .contact-info h3 {
+    font-size: 1.2rem;
     color: #dfdede;
     font-weight: normal;
-}.contact .row .content .contact-info h3 i {
+}.contact .content .contact-info h3 i {
     padding-right: 1rem;
 }
 h2 {
     text-transform: uppercase;
-    color: #ac8181;
-    color: #874205;
-    color: #7d0b81;
     color: #1884e2;
     font-size: max( 2rem, 3vw);
 }
 
-.contact .row form .box {
+.contact  form .box {
     padding: 0.5rem 1rem;
     background: #a5a1a133;
     color: #fff;
@@ -401,7 +386,7 @@ h2 {
     width: 100%;
 }
 
-.contact .row form .box::placeholder {
+.contact  form .box::placeholder {
     text-transform: capitalize;
 }
 .contact-grid {
@@ -425,23 +410,27 @@ h2 {
     grid-area: phone;
 }
 
-.contact .row form button {
+.contact  form button {
     margin-top: 1rem;
     width: 100%;
     padding: .5rem;
 }
 
 @media screen and (min-width: 920px) {
-    .contact-grid {
+    .contact  {
+        display: grid;
+        grid-template-columns: .5fr 1fr;
+    }
+    /* .contact-grid {
         grid-template-areas: 
         "name message"
         "email message"
         "phone message";
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 2fr;
-    }
+    } */
 
-    .contact .row form button {
+    .contact  form button {
         width: 50%;
         margin: 1rem auto 0 25%;
     }
