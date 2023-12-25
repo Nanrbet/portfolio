@@ -31,9 +31,8 @@ a {
     text-decoration: none;
 }
 
-.about a,
 .bio a,
-.card a {
+.project a {
     color: var(--font-color);
     padding: 0.2rem 1rem;
     background-color: var(--hover_color);
@@ -77,6 +76,7 @@ Header
     align-items: center;
     justify-content: center;
     text-transform: capitalize;
+    text-size-adjust: auto;
 
 }.nav-links div {
     padding: 1rem 2rem;
@@ -168,14 +168,15 @@ About section
 }
 
 .name-top {
-    font-size: 2vw;
+    font-size: 8vw;
+    text-align: left;
 }.name {
-    text-transform: uppercase;
-    font-size: 4vw;
+    text-transform: capitalize;
+    font-size: 3vw;
 }.name-info {
     font-family: 'Italianno', cursive;
     line-height: 60%;
-    font-size: 2vw;
+    font-size: 2.5vw;
 }
 
 
@@ -217,21 +218,17 @@ Profile section
 .logos {
     display: grid;
     padding-top: 1rem;
-    gap: 3vw;
-    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .logos div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-}.logos div i {
-    margin: 2vw 0 3vw 0;
-    font-size: 6vw;
-    color: rgba(31, 31, 31, 0.781);
+    justify-content: space-between;
 }.logos div img {
-    margin: 2vw 0 3vw 0;
+    margin: 1vw 0 1rem 0;
     width: 6vw;
     color: rgba(31, 31, 31, 0.781);
 }.logos div p {
@@ -251,101 +248,61 @@ Projects section
     background-color: #1a1a15;
 }
 
-.card {border: 2px solid rgb(72, 72, 156);
-    display: flex;
-    flex-direction: column;
+.project {border: 2px solid rgb(72, 72, 156);
+    display: grid;
+    grid-template-columns: auto;
     margin: 2rem 0;
     border-radius: 5%;
     padding: 3%;
 }
 
 /* slider start */
-.card .slider {
-    border: 2px solid tomato;
+.project .slider {
+    /* width: 100%; */
+    min-height: 190px;
+    background: url("Img/MMinder/MMinder-about.jpeg");
+    background-size: 50% 100%;
+    object-fit: cover;
+
+    animation: slide 10s infinite;
+    border: saddlebrown 1px solid;
 }
 
-.card .slides {
-    border: 2px solid yellow;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
 
-.card .input {
-    display: none;
-}
-
-.slide {
-    border: 2px solid aquamarine;
-    width: 25%;
-    transition: 2s;
-}.slide img {
-    height: 100%;
-}
-
-/* slide navigation */
-.navigation-manual,
-.navigation-auto {
-    border: 2px solid greenyellow;
-    position: absolute;
-    width: 50%;
-    bottom: 4%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.navigation-auto div,
-.manual-btn {
-    border: 2px solid green;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-
-.manual-btn:hover {
-    background-color: green;
-}
-
-#radio1:checked ~ .first{
-    margin-left: 0;
-}
-#radio2:checked ~ .first{
-    margin-left: -25%;
-}
-#radio3:checked ~ .first{
-    margin-left: -50%;
-}
-#radio4:checked ~ .first{
-    margin-left: -75%;
-}
-
-#radio1:checked ~ .navigation-auto .auto-btn1,
-#radio2:checked ~ .navigation-auto .auto-btn2,
-#radio3:checked ~ .navigation-auto .auto-btn3,
-#radio4:checked ~ .navigation-auto .auto-btn4{
-    background-color: red;
-}
-
+/* @keyframes slide {
+    25% {
+        background: url("Img/MMinder/MMinder-about.jpeg");
+    }
+    50% {
+        background: url("Img/MMinder/MMinder-recipe.jpeg");
+    }
+    75% {
+        background: url("Img/MMinder/MMinder-mobile.jpeg");
+    }
+    25% {
+        background: url("Img/MMinder/MMinder-home.jpeg");
+    }
+} */
 /* slider end */
 
 
-.card-links {
+.project-links {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-.card a {
+.project a {
     border-radius: 100vmax;
 }
 
 @media screen and (min-width: 920px) {
-    .card {
+    .project {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2vw;
     }
 }
+
 /*
 =============== 
 Contact
@@ -420,6 +377,9 @@ h2 {
     .contact  {
         display: grid;
         grid-template-columns: .5fr 1fr;
+    }
+    .bio p{
+        width: max(75ch);
     }
     /* .contact-grid {
         grid-template-areas: 
