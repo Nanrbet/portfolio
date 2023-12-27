@@ -107,6 +107,7 @@ Main
 */
 
 .bg-wrapper {
+    height: 100vh;
     top: 50px;
     position: relative;
     margin: 0 auto;
@@ -167,20 +168,16 @@ About section
     flex-direction: column;
 }
 .about-top p {
-    font-size: 2.5vw;
+    font-size: 2vw;
     text-align: center;
 }
 
 .name-top {
-    font-size: 8vw;
+    font-size: 5vw;
     text-align: left;
 }.name {
     text-transform: capitalize;
     font-size: 3vw;
-}.name-info {
-    font-family: 'Italianno', cursive;
-    line-height: 60%;
-    font-size: 2.5vw;
 }
 
 
@@ -408,9 +405,6 @@ h2 {
 }
 
 @media screen and (min-width: 920px) {
-    .bg-wrapper {
-        top: -5%
-    }
     .contact  {
         display: grid;
         grid-template-columns: .5fr 1fr;
@@ -454,6 +448,20 @@ Footer
 Media queries
 ===============
 */
+/* Background */
+@media screen and (min-width:940px){
+    .bg-wrapper {
+        top: -5vw;
+    }
+}
+
+@media screen and (min-width:1500px){ 
+     .main-container,
+    .project,
+    .about{
+        max-width: 1500px;
+    }
+}
 
 /* Navigation bar */
 @media screen and (max-width: 475px) {
@@ -473,17 +481,3 @@ Media queries
     }
 }
 
-/* Background */
-@media screen and (min-width:1240px){
-    .bg-wrapper {
-        top: -10%;
-    }
-}
-
-@media screen and (min-width:1500px){ 
-     .main-container,
-    .project,
-    .about{
-        max-width: 1500px;
-    }
-}
