@@ -207,7 +207,7 @@ Profile section
 
 .bio p {
     margin: 1rem 0;
-    background-color: rgba(82, 68, 68, 0.267);
+    background-color: rgba(50, 41, 41, 0.267);
 
 }
 
@@ -253,8 +253,12 @@ Projects section
     display: grid;
     grid-template-columns: auto;
     margin: 2rem 0;
-    border-radius: 5vw;
+    border-radius: 3vw;
     padding: 3%;
+}
+
+.project figcaption {
+    padding: 3% 0;
 }
 
 /* slider start */
@@ -410,7 +414,7 @@ h2 {
         grid-template-columns: .5fr 1fr;
     }
     .bio p{
-        width: max(75ch);
+        max-width: 75ch;
     }
     /* .contact-grid {
         grid-template-areas: 
@@ -469,7 +473,9 @@ Media queries
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 0.4fr;
     }
-
+    .about-top p {
+        font-size: 2.4vw;
+    }
     .social-icons {
         justify-content: space-around;
     }.social-icons div {
