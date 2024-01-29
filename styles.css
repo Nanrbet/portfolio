@@ -416,14 +416,9 @@ h2 {
     .bio p{
         max-width: 75ch;
     }
-    /* .contact-grid {
-        grid-template-areas: 
-        "name message"
-        "email message"
-        "phone message";
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 2fr;
-    } */
+    .logos div p {
+        font-size: 1vw;
+    }
 
     .contact  form button {
         width: 50%;
