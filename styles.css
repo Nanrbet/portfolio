@@ -258,7 +258,10 @@ Projects section
 }
 
 .project figcaption {
-    padding: 3% 0;
+    padding-top: 3%;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 /* slider start */
@@ -323,6 +326,7 @@ Projects section
 
 .project-links {
     display: flex;
+    padding-top: 3%;
     flex-direction: row;
     justify-content: space-around;
 }
@@ -330,7 +334,19 @@ Projects section
     border-radius: 100vmax;
 }
 
+/* On hover, show figcaption text and buttons */
+.projects .project:hover figcaption {
+    display: block;
+    opacity: 1;
+}
+
+
 @media screen and (min-width: 920px) {
+    .project figcaption {
+        padding-top: 3%;
+        display: block;
+        opacity: 1;
+    }
     .project {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
