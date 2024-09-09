@@ -332,6 +332,7 @@ Projects section
 }
 .project a {
     border-radius: 100vmax;
+    font-size: 14px;
 }
 
 /* On hover, show figcaption text and buttons */
