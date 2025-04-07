@@ -467,6 +467,7 @@ Projects section
   border: 1px solid var(--card-border);
   box-shadow: var(--shadow-md);
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  scroll-margin-top: 100px; 
 }
 
 .project:hover {
