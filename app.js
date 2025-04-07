@@ -96,3 +96,39 @@ const revealOnScroll = () => {
 window.addEventListener("scroll", revealOnScroll)
 window.addEventListener("load", revealOnScroll)
 
+// Add this function to handle smooth scrolling to project sections
+document.addEventListener('DOMContentLoaded', () => {
+    // Check if there's a hash in the URL
+    if (window.location.hash) {
+        const targetId = window.location.hash.substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+            // Small delay to ensure proper scrolling after page load
+            setTimeout(() => {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 100);
+        }
+    }
+
+    // Handle clicks on links with hash
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = anchor.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+                // Update URL without triggering scroll
+                window.history.pushState(null, '', `#${targetId}`);
+            }
+        });
+    });
+});
