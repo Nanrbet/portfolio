@@ -956,3 +956,331 @@ Media Queries
   .fa-spin {
     animation: spin 1s linear infinite;
   }
+
+/*
+=============== 
+Resume Section
+===============
+*/
+
+.resume-section {
+  padding: 3rem 0;
+  margin: 2rem 0;
+}
+
+.resume-card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.resume-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: linear-gradient(135deg, rgba(15, 129, 11, 0.1) 0%, rgba(15, 129, 11, 0.05) 100%);
+  border: 2px solid var(--primary-accent);
+  border-radius: var(--border-radius-lg);
+  padding: 2.5rem;
+  max-width: 700px;
+  width: 100%;
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 15px rgba(15, 129, 11, 0.2);
+}
+
+.resume-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(15, 129, 11, 0.3);
+  border-color: var(--primary-accent-hover);
+}
+
+.resume-card-icon {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-accent);
+  border-radius: var(--border-radius-lg);
+  font-size: 2.5rem;
+  color: white;
+  transition: all var(--transition-normal);
+}
+
+.resume-card:hover .resume-card-icon {
+  background-color: var(--primary-accent-hover);
+  transform: scale(1.1);
+}
+
+.resume-card-content {
+  flex: 1;
+}
+
+.resume-card-content h3 {
+  font-size: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.resume-card-content p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.resume-card-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-full);
+  font-weight: 500;
+  transition: all var(--transition-normal);
+  font-size: 0.95rem;
+}
+
+.resume-btn.primary {
+  background-color: var(--primary-accent);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.resume-btn.primary:hover {
+  background-color: var(--primary-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.resume-btn.secondary {
+  background-color: transparent;
+  color: var(--text-light);
+  border: 2px solid var(--primary-accent);
+}
+
+.resume-btn.secondary:hover {
+  background-color: var(--primary-accent);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+/* Resume Page Styles */
+
+.resume-page-hero {
+  background: linear-gradient(135deg, rgba(15, 129, 11, 0.15) 0%, rgba(15, 129, 11, 0.05) 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-bottom: 2px solid var(--primary-accent);
+  margin-top: 60px;
+}
+
+.resume-page-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.resume-page-content h1 {
+  font-size: 2.5rem;
+  color: var(--primary-accent);
+  margin-bottom: 0.5rem;
+}
+
+.resume-page-content p {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.resume-container {
+  max-width: 900px;
+}
+
+.resume-view {
+  padding: 2rem 0;
+}
+
+.resume-preview-section {
+  margin-bottom: 3rem;
+}
+
+.resume-preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.resume-preview-header h2 {
+  color: var(--text-light);
+  font-size: 1.5rem;
+}
+
+.resume-preview-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.download-btn,
+.open-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--primary-accent);
+  color: white;
+  border-radius: var(--border-radius-md);
+  font-weight: 500;
+  transition: all var(--transition-normal);
+  font-size: 0.9rem;
+}
+
+.download-btn:hover,
+.open-btn:hover {
+  background-color: var(--primary-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.pdf-container {
+  background: var(--card-bg);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 2rem;
+  min-height: 600px;
+}
+
+.pdf-container iframe {
+  display: block;
+}
+
+.fallback-message {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+  background: rgba(220, 53, 69, 0.1);
+  border: 1px solid var(--primary-accent);
+  border-radius: var(--border-radius-md);
+  margin-top: 1rem;
+  color: var(--text-light);
+}
+
+.fallback-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.fallback-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-accent);
+  color: white;
+  border-radius: var(--border-radius-md);
+  font-weight: 500;
+  transition: all var(--transition-normal);
+}
+
+.fallback-btn:hover {
+  background-color: var(--primary-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.resume-cta-section {
+  padding: 3rem 0;
+  margin-top: 3rem;
+  border-top: 1px solid var(--card-border);
+}
+
+.cta-box {
+  background: linear-gradient(135deg, rgba(15, 129, 11, 0.1) 0%, rgba(15, 129, 11, 0.05) 100%);
+  border: 2px solid var(--primary-accent);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  text-align: center;
+}
+
+.cta-box h3 {
+  font-size: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.cta-box p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.cta-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Responsive Resume Styles */
+
+@media screen and (max-width: 768px) {
+  .resume-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .resume-card-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+  }
+
+  .resume-card-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .resume-card-buttons {
+    justify-content: center;
+  }
+
+  .resume-preview-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resume-preview-header h2 {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .resume-preview-actions {
+    width: 100%;
+  }
+
+  .download-btn,
+  .open-btn {
+    flex: 1;
+    justify-content: center;
+    min-width: 150px;
+  }
+
+  .pdf-container {
+    min-height: 400px;
+  }
+
+  .resume-page-content h1 {
+    font-size: 2rem;
+  }
+
+  .resume-page-hero {
+    padding: 3rem 1rem;
+  }
+}
