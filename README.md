@@ -8,7 +8,7 @@ Welcome to my portfolio repository! This website showcases my skills, projects, 
 
 ## 🚀 Live Demo
 
-Visit my portfolio: [https://nanrbet.github.io/Learning-Projects/Me_portfolio/index.html](https://nanrbet.github.io/Learning-Projects/Me_portfolio/index.html)
+Visit my portfolio: [https://nanrbet.github.io/Learning-Projects/Me_portfolio/index.html](https://nanrbet.github.io/portfolio/)
 
 ## 🛠️ Technologies Used
 

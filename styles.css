@@ -28,6 +28,10 @@
   --border-radius-lg: 16px;
   --border-radius-xl: 24px;
   --border-radius-full: 9999px;
+
+  --progress-bar-color-start: #0f810b;
+  --progress-bar-color-end: #0c6a09;
+  --progress-bar-glow: rgba(15, 129, 11, 0.4);
 }
 
 * {
@@ -114,6 +118,18 @@ button {
 Header & Navigation
 ===============
 */
+
+.scroll-progress-bar {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(to right, var(--progress-bar-color-start), var(--progress-bar-color-end));
+  width: 0%;
+  z-index: 100;
+  transition: width 0.1s ease;
+  box-shadow: 0 0 10px var(--progress-bar-glow);
+}
 
 .nav-bar {
   position: fixed;
