@@ -8,14 +8,14 @@ Welcome to my portfolio repository! This website showcases my skills, projects, 
 
 ## 🚀 Live Demo
 
-Visit my portfolio: [https://nanrbet.github.io/Learning-Projects/Me_portfolio/index.html](https://nanrbet.github.io/portfolio/)
+Visit my portfolio: [link](https://nanrbet.github.io/portfolio/)
 
 ## 🛠️ Technologies Used
 
 This portfolio was built from scratch using:
 
-- **HTML5** - Semantic structure and content organization
-- **CSS3** - Custom styling, animations, and responsive design
+- **HTML** - Semantic structure and content organization
+- **CSS** - Custom styling, animations, and responsive design
 - **JavaScript** - Interactive elements and dynamic content
 - **FontAwesome** - Icon library for visual elements
 
