@@ -1121,6 +1121,29 @@ Resume Section
   font-size: 1.5rem;
 }
 
+.resume-intro {
+  background: rgba(15, 129, 11, 0.08);
+  border-left: 4px solid var(--primary-accent);
+  padding: 2rem;
+  border-radius: var(--border-radius-md);
+  margin-bottom: 3rem;
+}
+
+.resume-intro-content {
+  max-width: 800px;
+}
+
+.resume-intro-content p {
+  color: var(--text-light);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.resume-intro-content p:last-child {
+  margin-bottom: 0;
+}
+
 .resume-preview-actions {
   display: flex;
   gap: 1rem;
@@ -1216,8 +1239,13 @@ Resume Section
 }
 
 .cta-box p {
-  color: var(--text-muted);
+  color: var(--text-light);
   margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta-group {
