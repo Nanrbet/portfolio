@@ -121,7 +121,7 @@ Header & Navigation
 
 .scroll-progress-bar {
   position: fixed;
-  top: 60px;
+  top: 56px;
   left: 0;
   height: 4px;
   background: linear-gradient(to right, var(--progress-bar-color-start), var(--progress-bar-color-end));
@@ -203,6 +203,14 @@ Header & Navigation
   display: none;
   font-size: 1.5rem;
   color: var(--text-light);
+}
+
+.mobile-social-divider {
+  display: none;
+}
+
+.mobile-social-icons {
+  display: none;
 }
 
 /*
@@ -841,17 +849,25 @@ Media Queries
     display: none !important;
   }
 
+  .mobile-social-divider {
+    display: block;
+  }
+
+  .mobile-social-icons {
+    display: none;
+  }
+
   .nav-links {
     display: none;
     position: fixed;
-    top: 64px;
+    top: 60px;
     left: 0;
     width: 100%;
     flex-direction: column;
     background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
     padding: 1rem 0;
-    max-height: calc(100vh - 64px);
+    max-height: calc(100vh - 60px);
     overflow-y: auto;
     z-index: 98;
   }
