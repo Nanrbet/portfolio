@@ -4,12 +4,12 @@ document.getElementById("date").textContent = new Date().getFullYear()
 // Mobile menu toggle
 const mobileMenuBtn = document.querySelector(".mobile-menu-btn")
 const navLinks = document.querySelector(".nav-links")
-const socialIcons = document.querySelector(".social-icons")
+const mobileSocialIcons = document.querySelector(".mobile-social-icons")
 
 if (mobileMenuBtn) {
   mobileMenuBtn.addEventListener("click", () => {
-    navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex"
-    socialIcons.style.display = socialIcons.style.display === "flex" ? "none" : "flex"
+    navLinks.classList.toggle("active")
+    mobileSocialIcons.classList.toggle("active")
 
     // Change icon based on menu state
     const icon = mobileMenuBtn.querySelector("i")
@@ -28,8 +28,8 @@ const navItems = document.querySelectorAll(".nav-links a")
 navItems.forEach((item) => {
   item.addEventListener("click", () => {
     if (window.innerWidth <= 768) {
-      navLinks.style.display = "none"
-      socialIcons.style.display = "none"
+      navLinks.classList.remove("active")
+      mobileSocialIcons.classList.remove("active")
 
       const icon = mobileMenuBtn.querySelector("i")
       icon.classList.remove("fa-times")

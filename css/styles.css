@@ -121,7 +121,7 @@ Header & Navigation
 
 .scroll-progress-bar {
   position: fixed;
-  top: 70px;
+  top: 60px;
   left: 0;
   height: 4px;
   background: linear-gradient(to right, var(--progress-bar-color-start), var(--progress-bar-color-end));
@@ -140,6 +140,7 @@ Header & Navigation
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 2rem;
+  height: 60px;
   background: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow-md);
@@ -836,9 +837,75 @@ Media Queries
 */
 
 @media screen and (max-width: 768px) {
-  .nav-links,
   .social-icons {
+    display: none !important;
+  }
+
+  .nav-links {
     display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+    z-index: 98;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a div {
+    padding: 1rem 1.5rem;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-links a:last-of-type div {
+    border-bottom: none;
+  }
+
+  .nav-links a div::after {
+    display: none;
+  }
+
+  .nav-links a:hover div::after,
+  .nav-links a:focus div::after {
+    display: none;
+  }
+
+  .mobile-social-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0.5rem 0;
+  }
+
+  .mobile-social-icons {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .mobile-social-icons.active {
+    display: flex;
+  }
+
+  .mobile-social-icons a {
+    font-size: 1.3rem;
+    transition: transform var(--transition-normal);
+  }
+
+  .mobile-social-icons a:hover {
+    transform: scale(1.2);
+    color: var(--primary-accent);
   }
 
   .mobile-menu-btn {
