@@ -145,3 +145,18 @@ if (progressBar) {
   });
 }
 
+// Clear cache and load latest resume PDF when on resume page
+const resumeFrame = document.getElementById('resumeFrame');
+if (resumeFrame) {
+  // Clear Service Worker caches
+  if ('caches' in window) {
+    caches.keys().then(cacheNames => {
+      cacheNames.forEach(cacheName => {
+        caches.delete(cacheName);
+      });
+    });
+  }
+  // Load resume PDF with timestamp to bypass browser cache
+  resumeFrame.src = '../assets/resume.pdf?t=' + Date.now();
+}
+
